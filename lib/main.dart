@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simpleflutterghpage/screens/AboutScreen.dart';
-import 'package:simpleflutterghpage/screens/HomeScreen.dart';
+import 'package:simpleflutterghpage/screens/about_screen.dart';
+import 'package:simpleflutterghpage/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
