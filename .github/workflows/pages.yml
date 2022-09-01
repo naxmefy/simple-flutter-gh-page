@@ -29,10 +29,11 @@ jobs:
         with:
           flutter-version: '3.3.0'
           channel: 'stable'
+      - uses: rlespinasse/github-slug-action@v4
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
-      - run: flutter build web --base-href /simple-flutter-gh-page/
+      - run: flutter build web --base-href "/${{env.GITHUB_REPOSITORY_NAME_PART_SLUG_URL}}/"
       - uses: actions/upload-pages-artifact@v1
         with:
           path: "./build/web"
