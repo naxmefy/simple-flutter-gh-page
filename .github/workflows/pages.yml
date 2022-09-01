@@ -33,7 +33,7 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
-      - run: flutter build web --base-href "/${{env.GITHUB_REPOSITORY_NAME_PART_SLUG_URL}}/"
+      - run: flutter build web --release --base-href "/${{env.GITHUB_REPOSITORY_NAME_PART_SLUG_URL}}/"
       - uses: actions/upload-pages-artifact@v1
         with:
           path: "./build/web"
