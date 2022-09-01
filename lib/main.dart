@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:simpleflutterghpage/screens/about_screen.dart';
 import 'package:simpleflutterghpage/screens/home_screen.dart';
 
 void main() {
+  usePathUrlStrategy();
   runApp(const MyApp());
 }
 
