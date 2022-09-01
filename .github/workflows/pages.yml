@@ -32,9 +32,7 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
-      - run: flutter build web
-        env:
-          FLUTTER_BASE_HREF: "/simple-flutter-gh-page"
+      - run: flutter build web --base-href /simple-flutter-gh-page/
       - uses: actions/upload-pages-artifact@v1
         with:
           path: "./build/web"
